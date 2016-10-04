@@ -18,7 +18,7 @@ A simple integration to use Keycloak with Openfire
     }
   }
   ```  
-  I used Keycloak Authorization Services, more information could be read at https://keycloak.gitbooks.io/authorization-services-guide/content/v/2.2/topics/service/client-api.html
+  To connect to Keycloak I used  Authorization Services, more information could be read at https://keycloak.gitbooks.io/authorization-services-guide/content/v/2.2/topics/service/client-api.html
 * Open openfire.xml and configure as below:  
     ```xml
   <provider>
