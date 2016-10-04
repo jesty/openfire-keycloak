@@ -3,7 +3,7 @@ A simple integration to use Keycloak with Openfire
 
 # Setup:
 
-* Download the JAR or, if you prefer, build the project.
+* Download the JAR in dist folder or, if you prefer, build the project.
 * Download the database driver that you use for Keycloak.
 * Copy the 2 jars to lib/ folder in your openfire distribution.
 * Create a realm named `Openfire` and a client named `test` on Keycloak.
