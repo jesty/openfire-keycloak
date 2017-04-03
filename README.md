@@ -6,7 +6,8 @@ A simple integration to use Keycloak with Openfire
 * Download the JAR in dist folder or, if you prefer, build the project.
 * Download the database driver that you use for Keycloak.
 * Copy the 2 jars to lib/ folder in your openfire distribution.
-* Create a realm named `Openfire` and a client named `test` on Keycloak.
+* Create a realm named `Openfire` and a client named `test` on Keycloak. 
+* Create an admin user in this realm, to ensure that you can access the Openfire admin console.
 * Download your keycloak.json from Keycloak Admin console and copy in lib/ folder. The file should be like:  
   ```json
   {
@@ -31,15 +32,16 @@ A simple integration to use Keycloak with Openfire
   </provider>
   <jdbcProvider>
     <driver>org.postgresql.Driver</driver>
-    <connectionString>jdbc:postgresql:///keycloak?user=prostgres&amp;password=admin</connectionString>
+    <connectionString>jdbc:postgresql://localhost/keycloak?user=keycloak&amp;password=keycloak</connectionString>
   </jdbcProvider>
-  <jdbcUserProviderSELECT username, email FROM user_entity where realm_id = 'Openfire' and username=?</loadUserSQL>
-     <userCountSQL>SELECT COUNT(*) FROM user_entity where realm_id = 'Openfire'</userCountSQL>
-     <allUsersSQL>SELECT username FROM user_entity where realm_id = 'Openfire'</allUsersSQL>
-     <searchSQL>SELECT username FROM user_entity where realm_id = 'Openfire' and</searchSQL>
-     <usernameField>username</usernameField>
-     <nameField>username</nameField>
-     <emailField>email</emailField>
+  <jdbcUserProvider>
+    <loadUserSQL>SELECT username, email FROM user_entity where realm_id = 'Openfire' and username=?</loadUserSQL>
+    <userCountSQL>SELECT COUNT(*) FROM user_entity where realm_id = 'Openfire'</userCountSQL>
+    <allUsersSQL>SELECT username FROM user_entity where realm_id = 'Openfire'</allUsersSQL>
+    <searchSQL>SELECT username FROM user_entity where realm_id = 'Openfire' and</searchSQL>
+    <usernameField>username</usernameField>
+    <nameField>username</nameField>
+    <emailField>email</emailField>
   </jdbcUserProvider>
 ```
 
