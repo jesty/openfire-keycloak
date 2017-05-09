@@ -31,7 +31,7 @@
     </repositories>
 
     <properties>
-        <keycloack.version>2.2.1.Final</keycloack.version>
+        <keycloak.version>2.2.1.Final</keycloak.version>
         <resteasy.version>3.0.9.Final</resteasy.version>
     </properties>
 
@@ -73,30 +73,30 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-authz-client</artifactId>
-            <version>${keycloack.version}</version>
+            <version>${keycloak.version}</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-admin-client</artifactId>
-            <version>${keycloack.version}</version>
+            <version>${keycloak.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-core</artifactId>
-            <version>${keycloack.version}</version>
+            <version>${keycloak.version}</version>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-adapter-spi</artifactId>
-            <version>${keycloack.version}</version>
+            <version>${keycloak.version}</version>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-adapter-core</artifactId>
-            <version>${keycloack.version}</version>
+            <version>${keycloak.version}</version>
         </dependency>
     </dependencies>
 

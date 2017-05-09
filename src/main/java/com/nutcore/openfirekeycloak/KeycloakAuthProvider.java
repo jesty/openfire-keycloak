@@ -5,7 +5,7 @@ import org.jivesoftware.openfire.auth.UnauthorizedException;
 import org.jivesoftware.openfire.user.UserNotFoundException;
 import org.keycloak.authorization.client.AuthzClient;
 
-public class KeyloackAuthProvider implements AuthProvider
+public class KeycloakAuthProvider implements AuthProvider
 {
 
     public void authenticate(String username, String password) throws UnauthorizedException
